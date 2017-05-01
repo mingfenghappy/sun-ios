@@ -7,4 +7,9 @@ target 'Cornell Sun' do
 
   # Pods for Cornell Sun
   pod 'SDWebImage', '~>3.8'
+  pod 'OneSignal', '>= 2.5.2', '< 3.0'
+end
+
+target 'OneSignalNotificationServiceExtension' do
+    pod 'OneSignal', '>= 2.5.2', '< 3.0'
 end

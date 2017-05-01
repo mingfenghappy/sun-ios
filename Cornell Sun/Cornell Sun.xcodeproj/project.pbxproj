@@ -13,8 +13,35 @@
 		5006B00E1EA963A900F58549 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5006B00D1EA963A900F58549 /* Default-568h@2x.png */; };
 		5006B24D1EADA37F00F58549 /* PostObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5006B24C1EADA37E00F58549 /* PostObject.swift */; };
 		50A898121EAEC93B0099CFA9 /* AuthorObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A898111EAEC93B0099CFA9 /* AuthorObject.swift */; };
+		619115061EB700C8001AF9E6 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619115051EB700C8001AF9E6 /* NotificationService.swift */; };
+		6191150A1EB700C8001AF9E6 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 619115031EB700C8001AF9E6 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A04259C8B9634D7E09DD49BC /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2A0A6ECEA6F1ED6463F0A8 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		F252229F2922831926DB3A6C /* Pods_Cornell_Sun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBAAD519F3C5A2D044960CA /* Pods_Cornell_Sun.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		619115081EB700C8001AF9E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5006AFF01EA9625000F58549 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 619115021EB700C8001AF9E6;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6191150E1EB700C8001AF9E6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6191150A1EB700C8001AF9E6 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3DBAAD519F3C5A2D044960CA /* Pods_Cornell_Sun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cornell_Sun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,8 +53,14 @@
 		5006B00D1EA963A900F58549 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5006B24C1EADA37E00F58549 /* PostObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostObject.swift; path = "Cornell Sun/PostObject.swift"; sourceTree = "<group>"; };
 		50A898111EAEC93B0099CFA9 /* AuthorObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorObject.swift; path = "Cornell Sun/AuthorObject.swift"; sourceTree = "<group>"; };
+		619115031EB700C8001AF9E6 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		619115051EB700C8001AF9E6 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		619115071EB700C8001AF9E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E2A0A6ECEA6F1ED6463F0A8 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		746F098FBF9579D2FEBC2844 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		79D08546F469CBFA91B516C4 /* Pods-Cornell Sun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cornell Sun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cornell Sun/Pods-Cornell Sun.debug.xcconfig"; sourceTree = "<group>"; };
 		A733FA4C43777F59F6F0F8B3 /* Pods-Cornell Sun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cornell Sun.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cornell Sun/Pods-Cornell Sun.release.xcconfig"; sourceTree = "<group>"; };
+		F1BA4BE4C57EAC3AD7407559 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +69,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F252229F2922831926DB3A6C /* Pods_Cornell_Sun.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		619115001EB700C8001AF9E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A04259C8B9634D7E09DD49BC /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +89,7 @@
 				5006B00D1EA963A900F58549 /* Default-568h@2x.png */,
 				5006B24E1EADA38400F58549 /* Objects */,
 				5006AFFA1EA9625000F58549 /* Cornell Sun */,
+				619115041EB700C8001AF9E6 /* OneSignalNotificationServiceExtension */,
 				5006AFF91EA9625000F58549 /* Products */,
 				6FF0DFD245B42D7BBFBC46CA /* Pods */,
 				C0B2C074512AC5316E8D48D8 /* Frameworks */,
@@ -58,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				5006AFF81EA9625000F58549 /* Cornell Sun.app */,
+				619115031EB700C8001AF9E6 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,11 +125,22 @@
 			name = Objects;
 			sourceTree = "<group>";
 		};
+		619115041EB700C8001AF9E6 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				619115051EB700C8001AF9E6 /* NotificationService.swift */,
+				619115071EB700C8001AF9E6 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		6FF0DFD245B42D7BBFBC46CA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				79D08546F469CBFA91B516C4 /* Pods-Cornell Sun.debug.xcconfig */,
 				A733FA4C43777F59F6F0F8B3 /* Pods-Cornell Sun.release.xcconfig */,
+				746F098FBF9579D2FEBC2844 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				F1BA4BE4C57EAC3AD7407559 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -95,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBAAD519F3C5A2D044960CA /* Pods_Cornell_Sun.framework */,
+				6E2A0A6ECEA6F1ED6463F0A8 /* libPods-OneSignalNotificationServiceExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,15 +167,36 @@
 				5006AFF61EA9625000F58549 /* Resources */,
 				5D796D343FAE3F7BC75A78B1 /* [CP] Embed Pods Frameworks */,
 				74EBFA210DC6D01883DE7F2A /* [CP] Copy Pods Resources */,
+				6191150E1EB700C8001AF9E6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				619115091EB700C8001AF9E6 /* PBXTargetDependency */,
 			);
 			name = "Cornell Sun";
 			productName = "Cornell Sun";
 			productReference = 5006AFF81EA9625000F58549 /* Cornell Sun.app */;
 			productType = "com.apple.product-type.application";
+		};
+		619115021EB700C8001AF9E6 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6191150D1EB700C8001AF9E6 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				CB2202E76318D1D204BAD932 /* [CP] Check Pods Manifest.lock */,
+				619114FF1EB700C8001AF9E6 /* Sources */,
+				619115001EB700C8001AF9E6 /* Frameworks */,
+				619115011EB700C8001AF9E6 /* Resources */,
+				BFF0D21391850861C4D87DA9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 619115031EB700C8001AF9E6 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -134,6 +210,10 @@
 				TargetAttributes = {
 					5006AFF71EA9625000F58549 = {
 						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					619115021EB700C8001AF9E6 = {
+						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -152,6 +232,7 @@
 			projectRoot = "";
 			targets = (
 				5006AFF71EA9625000F58549 /* Cornell Sun */,
+				619115021EB700C8001AF9E6 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -163,6 +244,13 @@
 			files = (
 				5006B0031EA9625000F58549 /* Assets.xcassets in Resources */,
 				5006B00E1EA963A900F58549 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		619115011EB700C8001AF9E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +302,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cornell Sun/Pods-Cornell Sun-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BFF0D21391850861C4D87DA9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB2202E76318D1D204BAD932 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -228,7 +346,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		619114FF1EB700C8001AF9E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				619115061EB700C8001AF9E6 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		619115091EB700C8001AF9E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 619115021EB700C8001AF9E6 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 619115081EB700C8001AF9E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5006B0081EA9625000F58549 /* Debug */ = {
@@ -328,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79D08546F469CBFA91B516C4 /* Pods-Cornell Sun.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Cornell Sun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -341,11 +476,38 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A733FA4C43777F59F6F0F8B3 /* Pods-Cornell Sun.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Cornell Sun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cornellsun.Cornell-Sun";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6191150B1EB700C8001AF9E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 746F098FBF9579D2FEBC2844 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornellsun.Cornell-Sun.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6191150C1EB700C8001AF9E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1BA4BE4C57EAC3AD7407559 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cornellsun.Cornell-Sun.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -370,6 +532,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6191150D1EB700C8001AF9E6 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6191150B1EB700C8001AF9E6 /* Debug */,
+				6191150C1EB700C8001AF9E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
