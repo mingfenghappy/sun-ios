@@ -14,6 +14,7 @@ enum SunAPI {
     //Posts
     case post(postId: Int)
     case recentPosts
+    case searchPosts(query: String)
 
     //Authors
     case author(authorId: Int)
@@ -32,6 +33,8 @@ extension SunAPI: TargetType {
             return "/posts/\(postId)"
         case .recentPosts:
             return "/posts"
+        case .searchPosts(let query):
+            return "/posts?search=" + query
         case .author(let authorId):
             return "/users/\(authorId)"
         case .media(let mediaId):
