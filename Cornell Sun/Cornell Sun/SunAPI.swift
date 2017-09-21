@@ -34,7 +34,7 @@ extension SunAPI: TargetType {
         case .recentPosts:
             return "/posts"
         case .searchPosts(let query):
-            return "/posts?search=" + query
+            return "/posts"
         case .author(let authorId):
             return "/users/\(authorId)"
         case .media(let mediaId):
@@ -51,6 +51,8 @@ extension SunAPI: TargetType {
 
     var parameters: [String: Any]? {
         switch self {
+        case .searchPosts(let query):
+            return ["search": query]
             //Use for POST Methods
         default:
             return nil
@@ -60,7 +62,14 @@ extension SunAPI: TargetType {
     //How to encode parameters in the request
     //You can choose between JSON Encoding (parameters will be set ass object in request body) and URL encoding (parameters will be in URL seperated by & symbol)
     var parameterEncoding: ParameterEncoding {
-        return JSONEncoding.default
+        switch self {
+        case .searchPosts(_):
+            return URLEncoding.default
+        default:
+            return JSONEncoding.default
+
+        }
+
     }
 
     //Can be used for testing

@@ -10,30 +10,27 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
 
-    var query: String?
+    var query: String = ""
     var searchResults: [String] = []
     var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if query == nil {
-            query = ""
-        }
-
         self.view.backgroundColor = .white
-        navigationItem.title = "Search Results for \"\(query!)\""
+        navigationItem.title = "Search Results for \"\(query)\""
         print("About to make API Request")
-        API.request(target: .searchPosts(query: query!), success: { (response) in
+        API.request(target: .searchPosts(query: query), success: { (response) in
             // parse your data
             print("In Successful")
-            print(response)
-//            do {
-//                // parse response
-//            } catch {
-//                print("could not parse")
-//                // can't parse data, show error
-//            }
+            do {
+                // parse response
+                let jsonResult = try JSONSerialization.jsonObject(with: response.data, options: [])
+                print(jsonResult)
+            } catch {
+                print("could not parse")
+                // can't parse data, show error
+            }
         }, error: { (error) in
             // error from Wordpress
             print("In Error Block")
