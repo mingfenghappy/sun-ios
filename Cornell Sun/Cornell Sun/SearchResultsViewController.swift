@@ -19,41 +19,49 @@ class SearchResultsViewController: UIViewController {
 
         self.view.backgroundColor = .white
         navigationItem.title = "Search Results for \"\(query)\""
-        print("About to make API Request")
-        API.request(target: .searchPosts(query: query), success: { (response) in
-            // parse your data
-            print("In Successful")
-            do {
-                // parse response
-                let jsonResult = try JSONSerialization.jsonObject(with: response.data, options: [])
-                print(jsonResult)
-            } catch {
-                print("could not parse")
-                // can't parse data, show error
-            }
-        }, error: { (error) in
-            // error from Wordpress
-            print("In Error Block")
-            print(error)
-            print(error.localizedDescription)
-        }, failure: { (_) in
-            // show Moya error
-            print("In Moya error block")
-        })
 
+        // Set up table view to show all results -- This could become a collection view if necessary
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: "SearchResultCell")
         tableView.delegate = self
         tableView.dataSource = self
         view.addSubview(tableView)
 
+        // Make API request to cornellsun with query
+        API.request(target: .searchPosts(query: query), success: { (response) in
+            do {
+                // Parse successful response
+                let jsonResult = try JSONSerialization.jsonObject(with: response.data, options: [])
+                if let postArray = jsonResult as? [[String: Any]] {
+                    // For each article in the response
+                    for postDictionary in postArray {
+                        guard
+                            let links = postDictionary["_links"] as? [String: Any],
+                            let titleDictionary = postDictionary["title"] as? [String: Any]?,
+                            let title = titleDictionary!["rendered"] as? String,
+                            let media = links["wp:featuredmedia"] as? [[String: Any]],
+                            var _ = media[0]["href"] as? String
+                            else {
+                                return
+                        }
+                        // As of right now, just append title to searchResults
+                        self.searchResults.append(title)
+                    }
+                    // After iterating through all the articles, reload tableView
+                    self.tableView.reloadData()
+                }
+            } catch {
+                // Unable to parse response
+                print("Unable to parse successful response.")
+            }
+        }, error: { (error) in
+            // Error from Wordpress
+            print("Error in request to Wordpress: \(error.localizedDescription)")
+        }, failure: { (_) in
+            // Show Moya error
+            print("Error with Moya submitting request.")
+        })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
 extension SearchResultsViewController: UITableViewDelegate {
